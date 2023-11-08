@@ -1,7 +1,7 @@
 ﻿@model AfvalScheiden.Models.Garbage
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Afval";
 }
 
 <h1>Edit</h1>
@@ -14,27 +14,27 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
+                <label asp-for="Name" class="control-label">Naam</label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
+                <label asp-for="Description" class="control-label">Beschrijving</label>
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TimeNeeded" class="control-label"></label>
+                <label asp-for="TimeNeeded" class="control-label">Bestede stijd</label> - (Minuten)
                 <input asp-for="TimeNeeded" class="form-control" />
                 <span asp-validation-for="TimeNeeded" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="GarbageCategoryId" class="control-label"></label>
+                <label asp-for="GarbageCategoryId" class="control-label">Type afval</label>
                 <select asp-for="GarbageCategoryId" class="form-control" asp-items="ViewBag.GarbageCategoryId"></select>
                 <span asp-validation-for="GarbageCategoryId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LogbookId" class="control-label"></label>
+                <label asp-for="LogbookId" class="control-label">Logboek</label>
                 <select asp-for="LogbookId" class="form-control" asp-items="ViewBag.LogbookId"></select>
                 <span asp-validation-for="LogbookId" class="text-danger"></span>
             </div>

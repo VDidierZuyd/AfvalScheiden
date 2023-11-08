@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AfvalScheiden.styles.css" asp-append-version="true" />
 </head>
+<style>
+    /* Add margin to the header to create space above it */
+    header {
+        margin-bottom: 20px; /* Adjust the value as needed */
+    }
+</style>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AfvalScheiden</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -20,25 +26,26 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="People" asp-action="Index">Gebruikers</a>
                         </li>
+                        <!--
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="People" asp-action="Index">People</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Governments" asp-action="Index">Gemeentes</a>
                         </li>
+                        -->
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Governments" asp-action="Index">Government</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Garbages" asp-action="Index">Afval</a>
                         </li>
+                        <!--
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Garbages" asp-action="Index">Garbage</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="GarbageCategories" asp-action="Index">AfvalTypes</a>
                         </li>
+                        -->
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="GarbageCategories" asp-action="Index">Garbagecategories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Logbooks" asp-action="Index">Logbook</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Logbooks" asp-action="Index">Logboek</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />

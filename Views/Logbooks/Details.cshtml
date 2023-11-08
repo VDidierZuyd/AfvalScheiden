@@ -1,7 +1,7 @@
 ﻿@model AfvalScheiden.Models.Logbook
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Logboek";
 }
 
 <h1>Details</h1>
@@ -11,13 +11,13 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
+            Naam
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Name)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Person)
+            Gebruiker
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Person.Name)
