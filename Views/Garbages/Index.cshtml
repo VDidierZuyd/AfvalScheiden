@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<AfvalScheiden.Models.Garbage>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Afval";
 }
 
-<h1>Index</h1>
+<h1>Afval</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -13,19 +13,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                Naam
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                Beschrijving
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TimeNeeded)
+                Bestede tijd
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GarbageCategory)
+                Type afval
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Logbook)
+                Logboek
             </th>
             <th></th>
         </tr>
@@ -40,13 +40,13 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TimeNeeded)
+                @Html.DisplayFor(modelItem => item.TimeNeeded) Minuten
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.GarbageCategory.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Logbook.Id)
+                @Html.DisplayFor(modelItem => item.Logbook.Name)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

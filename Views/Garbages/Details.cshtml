@@ -1,7 +1,7 @@
 ﻿@model AfvalScheiden.Models.Garbage
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Afval";
 }
 
 <h1>Details</h1>
@@ -11,34 +11,34 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
+            Naam
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Name)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
+            Beschrijving
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Description)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TimeNeeded)
+            Bestede tijd
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TimeNeeded)
+            @Html.DisplayFor(model => model.TimeNeeded) Minuten
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.GarbageCategory)
+            Type afval
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.GarbageCategory.Name)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Logbook)
+            Logboek
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Logbook.Id)
+            @Html.DisplayFor(model => model.Logbook.Name)
         </dd>
     </dl>
 </div>

@@ -50,7 +50,7 @@ namespace AfvalScheiden.Controllers
         public IActionResult Create()
         {
             ViewData["GarbageCategoryId"] = new SelectList(_context.GarbageCategories, "Id", "Name");
-            ViewData["LogbookId"] = new SelectList(_context.Logbooks, "Id", "Id");
+            ViewData["LogbookId"] = new SelectList(_context.Logbooks, "Id", "Name");
             return View();
         }
 
@@ -68,7 +68,7 @@ namespace AfvalScheiden.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["GarbageCategoryId"] = new SelectList(_context.GarbageCategories, "Id", "Name", garbage.GarbageCategoryId);
-            ViewData["LogbookId"] = new SelectList(_context.Logbooks, "Id", "Id", garbage.LogbookId);
+            ViewData["LogbookId"] = new SelectList(_context.Logbooks, "Id", "Name", garbage.LogbookId);
             return View(garbage);
         }
 
@@ -86,7 +86,7 @@ namespace AfvalScheiden.Controllers
                 return NotFound();
             }
             ViewData["GarbageCategoryId"] = new SelectList(_context.GarbageCategories, "Id", "Name", garbage.GarbageCategoryId);
-            ViewData["LogbookId"] = new SelectList(_context.Logbooks, "Id", "Id", garbage.LogbookId);
+            ViewData["LogbookId"] = new SelectList(_context.Logbooks, "Id", "Name", garbage.LogbookId);
             return View(garbage);
         }
 

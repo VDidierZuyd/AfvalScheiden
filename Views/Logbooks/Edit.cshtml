@@ -1,7 +1,7 @@
 ﻿@model AfvalScheiden.Models.Logbook
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Logboek";
 }
 
 <h1>Edit</h1>
@@ -14,12 +14,12 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
+                <label asp-for="Name" class="control-label">Naam</label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PersonId" class="control-label"></label>
+                <label asp-for="PersonId" class="control-label">Gebruiker</label>
                 <select asp-for="PersonId" class="form-control" asp-items="ViewBag.PersonId"></select>
                 <span asp-validation-for="PersonId" class="text-danger"></span>
             </div>
