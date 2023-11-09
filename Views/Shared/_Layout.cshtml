@@ -29,24 +29,36 @@
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="People" asp-action="Index">Gebruikers</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Garbages" asp-action="Types">AfvalInfo</a>
                         </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="People" asp-action="Index">Gebruikers</a>
+                        </li>
+                        }
                         <!--
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Governments" asp-action="Index">Gemeentes</a>
                         </li>
                         -->
+                        @if (User.Identity.IsAuthenticated)
+                        {
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Garbages" asp-action="Index">Afval</a>
                         </li>
+                        }
                         <!--
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="GarbageCategories" asp-action="Index">AfvalTypes</a>
                         </li>
                         -->
+                        @if (User.Identity.IsAuthenticated)
+                            {
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Logbooks" asp-action="Index">Logboek</a>
                         </li>
+                        }
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

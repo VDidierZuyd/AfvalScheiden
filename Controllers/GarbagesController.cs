@@ -170,5 +170,11 @@ namespace AfvalScheiden.Controllers
         {
           return (_context.Garbages?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+
+        // GET: Garbages/Types
+        public IActionResult Types()
+        {
+            return View();
+        }
     }
 }
