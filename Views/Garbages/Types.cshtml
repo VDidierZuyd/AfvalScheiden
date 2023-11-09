@@ -1,0 +1,109 @@
+﻿@{
+    ViewData["Title"] = "Types";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        /* CSS for content area */
+        .content {
+            width: 650px
+        }
+        .sidebar {
+            margin-left: -100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="sidebar col-3 bg-light">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action" onclick="showContent('content1')">GFT</a>
+                    <a href="#" class="list-group-item list-group-item-action" onclick="showContent('content2')">Papier</a>
+                    <a href="#" class="list-group-item list-group-item-action" onclick="showContent('content3')">PMD</a>
+                    <a href="#" class="list-group-item list-group-item-action" onclick="showContent('content4')">Glas</a>
+                    <a href="#" class="list-group-item list-group-item-action" onclick="showContent('content5')">Textiel</a>
+                    <a href="#" class="list-group-item list-group-item-action" onclick="showContent('content6')">Rest</a>
+                </div>
+            </div>
+            <div class="col-9">
+                <div id="content1" class="content">
+                    <h1>Groente-, Fruit- en Tuinafval</h1>
+                    <p>
+                        GFT-afval bestaat uit organisch materiaal zoals schillen,
+                        restjes groente en fruit, koffiedik, theezakjes en tuinafval.
+                        Dit afval kan worden gecomposteerd, waardoor het wordt omgezet
+                        in voedingsrijke compost voor tuin- en landbouwdoeleinden. 
+                        Het is belangrijk om GFT-afval apart in te zamelen, 
+                        zodat het kan worden gerecycled.
+                    </p>
+                </div>
+                <div id="content2" class="content" style="display: none;">
+                    <h1>Papier</h1>
+                    <p>
+                        Papierafval verwijst naar allerlei soorten papier en karton,
+                        zoals kranten, tijdschriften, boeken, enveloppen, verpakkingen 
+                        en kartonnen dozen. Papier kan worden gerecycled om nieuw papier 
+                        en karton te produceren. Het is belangrijk om papierafval apart in 
+                        te zamelen, zodat het kan worden gerecycled en hergebruikt.
+                    </p>
+                </div>
+                <div id="content3" class="content" style="display: none;">
+                    <h1>Plastic, Metalen en Drankkartons</h1>
+                    <p>
+                        PMD-afval omvat verschillende soorten verpakkingen, waaronder plastic 
+                        flessen, plastic zakken, metalen blikjes, aluminiumfolie en drankkartons.
+                        Het is belangrijk om PMD-afval apart in te zamelen, omdat het kan worden 
+                        gerecycled tot nieuwe producten zoals verpakkingen, flessen en blikjes.
+                    </p>
+                </div>
+                <div id="content4" class="content" style="display: none;">
+                    <h1>Glas</h1>
+                    <p>
+                        Glasafval omvat allerlei soorten glazen verpakkingen, zoals flessen en potten. 
+                        Glas kan oneindig worden gerecycled zonder kwaliteitsverlies, waardoor het een
+                        duurzaam materiaal is. Het is belangrijk om glasafval apart in te zamelen, zodat
+                        het kan worden gerecycled en hergebruikt.
+                    </p>
+                </div>
+                <div id="content5" class="content" style="display: none;">
+                    <h1>Textiel</h1>
+                    <p>
+                        Textielafval verwijst naar kledingstukken, stoffen, lakens, handdoeken en andere
+                        soorten textiel die niet langer worden gebruikt. Textielafval kan worden gerecycled
+                        door het te sorteren, te hergebruiken of te verwerken tot nieuwe producten 
+                        zoals isolatiemateriaal of poetslappen. Het is belangrijk om textielafval apart in 
+                        te zamelen, zodat het kan worden gerecycled en hergebruikt.
+                    </p>
+                </div>
+                <div id="content6" class="content" style="display: none;">
+                    <h1>Rest</h1>
+                    <p>
+                        Restafval is het afval dat overblijft na het scheiden van recyclebare materialen.
+                        Het bestaat uit niet-recyclebaar afval zoals plastic folie, luiers, hygiëneproducten,
+                        chipszakken en andere niet-gescheiden materialen. Restafval wordt meestal verbrand in 
+                        afvalverbrandingsinstallaties om energie op te wekken. Het is belangrijk om restafval te
+                        verminderen door zoveel mogelijk te recyclen en bewust te consumeren.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showContent(contentId) {
+            // Hide all content areas
+            var contents = document.getElementsByClassName("content");
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].style.display = "none";
+            }
+            // Show selected content
+            document.getElementById(contentId).style.display = "block";
+        }
+    </script>
+</body>
+</html>

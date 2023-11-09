@@ -2,9 +2,74 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Afval Scheiding en Milieu</title>
+    <style>
+        .carousel-item {
+            height: 520px;
+        }
+
+            .carousel-item img {
+                height: 100%;
+                object-fit: cover;
+            }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://cdn.discordapp.com/attachments/1159769643968372817/1172168439905927278/fbe4e485-5005-4365-bfa8-7cb5c8f4b111_thumb1920.jpg?ex=655f55ed&is=654ce0ed&hm=f5ee6791a826516e6c50aa1280e04be601fb7059a9e5fdb9953be230b70bf478&" alt="Image 1">
+                    <div class="carousel-caption">
+                        <h3><h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://media.discordapp.net/attachments/1159769643968372817/1172168440170172528/a61c6ba4498443294411c67931ead997ea4d11c9.jpg?ex=655f55ed&is=654ce0ed&hm=6e24362aa95cbffa6e96ea078ed5f0bc54a622443e6efda32ab555a6f66a48b6&=&width=936&height=662" alt="Image 2">
+                    <div class="carousel-caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://media.discordapp.net/attachments/1159769643968372817/1172168440602177556/recycleren-van-afval-beheer-van.png?ex=655f55ee&is=654ce0ee&hm=cd3e40e8c642b8e99b94922321bd489c31720ef45d423f90e9d2f31139507296&=&width=1165&height=662" alt="Image 3">
+                    <div class="carousel-caption">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
 
 
