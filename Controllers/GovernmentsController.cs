@@ -159,5 +159,10 @@ namespace AfvalScheiden.Controllers
         {
           return (_context.Governments?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+
+        public IActionResult Types()
+        {
+            return View();
+        }
     }
 }
