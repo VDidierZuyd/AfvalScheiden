@@ -1,0 +1,131 @@
+﻿@{
+    ViewData["Title"] = "Types";
+}
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemeentes Limburg</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select {
+            width: 200px;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        .content {
+            width: 650px;
+        }
+
+        .sidebar {
+            margin-left: -100px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Gemeentes Limburg</h2>
+
+    <a href="#" class="list-group-item list-group-item-action"></a>
+    <label for="gemeenteSelect" class="list-group-item">Kies een gemeente:</label>
+    <select id="gemeenteSelect" class="form-control" onchange="selectGemeente(this.value)">
+        <option value="content1">Heerlen</option>
+        <option value="content2">Maastricht</option>
+        <option value="content3">Roermond</option>
+        <!-- Voeg hier meer gemeentes toe -->
+    </select>
+
+    <div id="content1" class="content">
+        <h1>Gemeente Heerlen</h1>
+        <h2>GFT-afval:</h2>
+        <p>
+            In Heerlen wordt GFT-afval gescheiden ingezameld. Dit omvat organisch materiaal zoals schillen,
+            restjes groente en fruit, koffiedik, theezakjes en tuinafval. Bewoners wordt gevraagd dit afval
+            in de groene bak te deponeren.
+        </p>
+        <h2>Papier:</h2>
+        <p>
+            Papierafval wordt in Heerlen apart ingezameld. Hieronder vallen kranten, tijdschriften, boeken,
+            enveloppen, verpakkingen en kartonnen dozen. Bewoners wordt gevraagd dit afval in de blauwe
+            papierbak te deponeren.
+        </p>
+        <h2>PMD:</h2>
+        <p>
+            Plastic, Metalen en Drankkartons (PMD) worden in Heerlen gescheiden ingezameld. Plastic flessen,
+            plastic zakken, metalen blikjes, aluminiumfolie en drankkartons horen thuis in de PMD-bak.
+        </p>
+    </div>
+
+    <div id="content2" class="content" style="display: none;">
+        <h1>Gemeente Maastricht</h1>
+        <h2>GFT-afval:</h2>
+        <p>
+            Maastricht zamelt GFT-afval gescheiden in. Hierbij gaat het om organisch materiaal zoals schillen,
+            restjes groente en fruit, koffiedik, theezakjes en tuinafval. Bewoners worden aangemoedigd dit afval
+            in de groene container te deponeren.
+        </p>
+        <h2>Papier:</h2>
+        <p>
+            Papierafval wordt in Maastricht apart ingezameld. Dit omvat kranten, tijdschriften, boeken,
+            enveloppen, verpakkingen en kartonnen dozen. Inwoners van Maastricht wordt gevraagd papierafval
+            in de daarvoor bestemde blauwe container te deponeren.
+        </p>
+        <h2>PMD:</h2>
+        <p>
+            Plastic, Metalen en Drankkartons (PMD) worden in Maastricht gescheiden ingezameld. Plastic flessen,
+            plastic zakken, metalen blikjes, aluminiumfolie en drankkartons kunnen worden gedeponeerd in de PMD-container.
+        </p>
+    </div>
+
+    <div id="content3" class="content" style="display: none;">
+        <h1>Gemeente Roermond</h1>
+        <h2>GFT-afval:</h2>
+        <p>
+            Roermond scheidt GFT-afval, inclusief organisch materiaal zoals schillen, restjes groente en fruit,
+            koffiedik, theezakjes en tuinafval. Bewoners van Roermond wordt gevraagd dit afval in de groene bak te
+            deponeren voor gescheiden inzameling.
+        </p>
+        <h2>Papier:</h2>
+        <p>
+            Papierafval wordt in Roermond apart ingezameld. Dit omvat kranten, tijdschriften, boeken, enveloppen,
+            verpakkingen en kartonnen dozen. Roermondse inwoners worden aangemoedigd papierafval in de blauwe
+            container te deponeren.
+        </p>
+        <h2>PMD:</h2>
+        <p>
+            Plastic, Metalen en Drankkartons (PMD) worden in Roermond gescheiden ingezameld. Plastic flessen, plastic
+            zakken, metalen blikjes, aluminiumfolie en drankkartons kunnen worden gedeponeerd in de PMD-container.
+        </p>
+    </div>
+
+    <!-- Voeg hier meer content-divs toe voor andere gemeentes -->
+
+    <script>
+        function selectGemeente(gemeente) {
+            // Verberg alle content-divs
+            var contentDivs = document.getElementsByClassName('content');
+            for (var i = 0; i < contentDivs.length; i++) {
+                contentDivs[i].style.display = 'none';
+            }
+
+            // Toon de geselecteerde content-div
+            document.getElementById(gemeente).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
